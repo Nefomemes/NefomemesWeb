@@ -26,3 +26,5 @@ app.get("/blog",(req, res) => {
 app.get('*', function(req, res){
   res.sendFile(path.resolve(__dirname,  "./pages/misc/notfound.html"));
 });
+
+//https://www.w3schools.com/code/tryit.asp?filename=GG87Z2IMK18F
