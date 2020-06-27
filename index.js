@@ -13,7 +13,9 @@ app.get("/nefobot", (req, res) => {
 app.get("/nefobot/invite", (req, res) => {
   res.redirect("https://discord.com/oauth2/authorize?client_id=675840311599300650&permissions=2013588566&scope=bot")
 });
-
+app.get("/discord", (req, res) => {
+  res.redirect("https://discord.gg/uBE8Sbh");
+});
 app.get("/yt", (req, res) => {
   res.redirect("https://www.youtube.com/channel/UC63Lz9E-kNgnGrnmM4dEllw")
 });
@@ -27,4 +29,4 @@ app.get('*', function(req, res){
   res.sendFile(path.resolve(__dirname,  "./pages/misc/notfound.html"));
 });
 
-//https://www.w3schools.com/code/tryit.asp?filename=GG87Z2IMK18F
+//https://www.w3schools.com/code/tryit.asp?filename=GG887GPTGEEX
