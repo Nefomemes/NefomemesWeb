@@ -8,9 +8,9 @@
     "npm": "6.x"
   },
   "scripts": {
-    "start":"npm start",
+
     "test": "echo \"Error: no test specified\" && exit 1",
-    "run": "node index.js"
+    "start": "node index.js"
   },
   "author": "Nefomemes#3927",
   "license": "ISC",
