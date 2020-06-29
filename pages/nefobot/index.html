@@ -5,12 +5,19 @@
 		<style>
 body, html{
 margin: 0;
-background-color: black;
+background-color: #091b2e;
 color: white;
 
 }
+.watermark {
+text-align: center;
+font-size: 0.3vw;
+padding: 1vw;
+background-color: #090f14;
+}
+
 nav ul{
-background-color: black;
+background-color: #090f14;
 margin: 0;
 
 
@@ -42,6 +49,7 @@ color: unset;
 
 }
 a {
+	
 text-decoration: none;
 color: unset
 }
@@ -63,11 +71,6 @@ text-align: center;
 
 }
 
-.watermark {
-text-align: center;
-font-size: 0.3vw;
-padding: 1vw;
-}
 
 .landing h2{
 color: white;
@@ -78,7 +81,35 @@ font-size: 1vw;
 text-align: center;
 }
 
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%
+}
+.sticky + .content {
+  padding-top: 102px;
+}
 
+.alert {
+  padding: 20px;
+  background-color: #ff4d00;
+  color: white;
+}
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
+}
 @media (min-width: 760px){
 .landing h1{
 margin-top: 150px;
@@ -114,29 +145,61 @@ margin-top: -100px;
 						</head>
 						<body>
 							<nav>
-								<ul class="links1">
-									<li>
-										<a href="https://nefomemes.herokuapp.com/nefobot" title="Nefobot">Nefobot</a>
-									</li>
-								</ul>
-								<ul class="links">
-									<li>
-										<a href="https://nefomemes.herokuapp.com/nefobot/invite" title="Invite Nefobot">Invite</a>
-									</li>
-									<li>
-										<a href="https://nefomemes.herokuapp.com/nefobot/commands" title="Command lists">Commands</a>
-									</li>
-									<li>
-										<a href="https://nefomemes.herokuapp.com/discord" title="Nefobot Support Server">Support</a>
-									</li>
-								</ul>
-								<section class="landing">
+								<div  class="header" id="linkHeader">
+									<ul class="links1">
+										<li>
+											<a href="https://nefomemes.herokuapp.com/nefobot" title="Nefobot">Nefobot</a>
+										</li>
+									</ul>
+									<ul class="links">
+										<li>
+											<a href="https://nefomemes.herokuapp.com/nefobot/invite" title="Invite Nefobot">Invite</a>
+										</li>
+										<li>
+											<a href="https://nefomemes.herokuapp.com/nefobot/commands" title="Command lists">Commands</a>
+										</li>
+										<li>
+											<a href="https://nefomemes.herokuapp.com/discord" title="Nefobot Support Server">Support</a>
+										</li>
+									</ul>
+								  </div>
+								  <div class="alert">
+									<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+									 This website is still in development. Changes may be made without any further notice.
+								  </div>
+								<section class="landing content">
 									<h1>Nefobot</h1>
 									<h2>A multi-purpose Discord bot made with the Discord.js library.</h2>
 									
 								</section>
+								<div>
+									Hello, there.
+
+								</div>
+							</nav>
 							</nav>
 
 <section class="watermark">©2020 Nefomemes#3927. All right reserved.</section>
+<script>
+	window.onscroll = function() {setClass()};
+
+// Get the header
+var header = document.getElementById("linkHeader");
+
+// Get the offset position of the navbar
+var sticky = header.offsetTop;
+
+// Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function setClass() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+</script>
+
+
 						</body>
 					</html>
+					
