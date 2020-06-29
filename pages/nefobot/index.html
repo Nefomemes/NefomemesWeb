@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-
+		<link href='https://fonts.googleapis.com/css?family=Bebas Neue' rel='stylesheet'>
 		<style>
 body, html{
 margin: 0;
@@ -14,6 +14,7 @@ text-align: center;
 font-size: 0.3vw;
 padding: 1vw;
 background-color: #090f14;
+margin-top: -20px;
 }
 
 nav ul{
@@ -32,11 +33,11 @@ padding: 5px 5px 5px 5px;
 padding-left: 6px;
 }
 .landing {
-background: url("https://i.imgur.com/RXJkwEZ.jpg");
+background: url("https://images.unsplash.com/photo-1578422557011-1e54eafcfd51?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80") no-repeat;
   background-size: contain;
     background-position: center center;
-min-height:100vh;
-max-height:100vh;
+min-height:96vh;
+max-height:96vh;
 overflow: hidden;
 background-size: cover;
 
@@ -63,24 +64,49 @@ font-size: 10px;
 }
 
 .landing h1{
-color: white;
-margin-top: 180px;
-font-size: 50px;
+color: whitesmoke;
 
+
+font-family: 'Bebas Neue';
 text-align: center;
+font-size: 12vw;
+}
+.title{
+	color: whitesmoke;
+	margin: 3vh;
+	font-family: 'Bebas Neue';
+	font-size: 10vh;
+}
+.title1{
+	min-height: 107.5vh;
+max-height: 107.5vh;
+margin-top: 0;
+margin-left: 0;
+margin-right: 0;
+	background: url("https://images.unsplash.com/photo-1558785953-c90665c9fba6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80") no-repeat;
+
+	overflow: hidden;
+background-size: cover;
+
+
 
 }
-
-
+.hm1{
+	margin-left: 10vh;
+	margin-top: 35vh;
+}
 .landing h2{
-color: white;
-margin-top: -60px;
+color: whitesmoke;
+margin-top: -150px;
 
 font-size: 1vw;
 
 text-align: center;
 }
+.card-base {
+width: 350px;	
 
+}
 .sticky {
   position: fixed;
   top: 0;
@@ -112,24 +138,30 @@ text-align: center;
 }
 @media (min-width: 760px){
 .landing h1{
-margin-top: 150px;
-font-size: 90px;
-}
-.landing h2{
-margin-top: -100px;
+
+font-size: 120px;
 }
 
 
+
 }
-@media (max-height: 285px){
+@media all and (min-height: 150px) and (max-height: 479px){
+
 .landing h1{
-margin-top: 50px;
-font-size: 90px;
+margin-top: 30px;
+
 }
-.landing h2{
-margin-top: -100px;
+
 }
-} 
+@media all and (min-height: 480px){
+
+.landing h1{
+margin-top: 200px;
+
+}
+
+}
+
 </style>
 		<title>Nefobot</title>
 		<meta charset="UTF-8">
@@ -163,23 +195,40 @@ margin-top: -100px;
 										</li>
 									</ul>
 								  </div>
-								  <div class="alert">
-									<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
-									 This website is still in development. Changes may be made without any further notice.
-								  </div>
+								  
 								<section class="landing content">
 									<h1>Nefobot</h1>
 									<h2>A multi-purpose Discord bot made with the Discord.js library.</h2>
 									
 								</section>
 								<div>
-									Hello, there.
+									<section class="title title1">
+										<section class="hm1">
+											Anime is irrelevant, use Call of Duty instead
+										</section>
+									</section>
+						<!--			<section class="title title2">
+										Let's see what's our users said.
+									</section>
+									<div class="card-container">
+										<div class="card-base card1">
 
+										</div>
+										<div class="card-base card2">
+											
+										</div>
+										<div class="card-base card3">
+											
+										</div>
+									</div>
+									<section class="title title3">
+										Pricing
+									</section>-->
 								</div>
 							</nav>
 							</nav>
 
-<section class="watermark">©2020 Nefomemes#3927. All right reserved.</section>
+<section class="watermark">Image provided by Unsplash and Pixabay. ©2020 Nefomemes#3927. All right reserved.</section>
 <script>
 	window.onscroll = function() {setClass()};
 
@@ -198,7 +247,7 @@ function setClass() {
   }
 }
 </script>
-
+<!--https://pixabay.com/photos/chernobyl-pripyat-ukraine-stalker-3711315/-->
 
 						</body>
 					</html>
