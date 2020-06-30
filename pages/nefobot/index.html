@@ -3,21 +3,24 @@
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link href='https://fonts.googleapis.com/css?family=Bebas Neue' rel='stylesheet'>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		<style>
 body, html{
+	cursor: auto;
 	margin-top: 0;
 margin-left:0;
 margin-right: 0;
 background-color: #091b2e;
 color: white;
-
+margin-bottom: -1vh;
 }
 .watermark {
 text-align: center;
 font-size: 0.3vw;
 padding: 1vw;
 background-color: #090f14;
-margin-top: -20px;
+
+
 }
 
 nav ul{
@@ -88,7 +91,9 @@ max-height: 107.5vh;
 
 	background: url("https://images.unsplash.com/photo-1558785953-c90665c9fba6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80") no-repeat;
 	margin-top: 0;
+	height: 100vh;
 margin-left: 0;
+margin-bottom: 1vh;
 margin-right: 0;
 overflow: hidden;
 background-size: cover;
@@ -100,10 +105,14 @@ background-size: cover;
 	width: 100vh;
 	overflow: hidden;
 	background-size: cover;
-
+	display: none;
 }
 
-
+.hm2{
+	font-size: 5vh;
+	float: right;
+	margin-right: 9vh;
+}
 .title2{
 	background:url("https://cdn.pixabay.com/photo/2018/09/29/12/06/chernobyl-3711315_960_720.jpg") no-repeat;
 	margin-top: -5.8vh;
@@ -118,10 +127,15 @@ background-size: cover;
 	margin-left: 11vh;
 }
 .hm1{
-	margin-left: 11vh;
+
 	margin-top: 36vh;
 }
-
+.hm2 {
+	margin-left: 10vw;
+	float: right;
+	margin-right: 10vw;
+	vertical-align:top;
+}
 .landing h2{
 color: whitesmoke;
 margin-top: -200px;
@@ -132,8 +146,15 @@ text-align: center;
 }
 .card-base {
 width: 350px;	
-
 }
+.phone1 {
+	margin-left: -5vw;
+
+	float: left;
+	z-index: -1000;
+	background-size: 90%;
+}
+
 .sticky {
   position: fixed;
   top: 0;
@@ -142,66 +163,101 @@ width: 350px;
 .sticky + .content {
   padding-top: 102px;
 }
-.hm2 {
-	margin-left: 10px;
-}
-.phone1 {
-	margin-left: -5vw;
-	margin-top: -20vw;
-	float: left;
-}
+
+
 
 .closebtn:hover {
   color: black;
 }
+
+
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-	.landing h1 {
-		margin-top:  250px;
+	.landing h1{
+		margin-top: 40vh;
 	}
-	.landing h2 {
-		margin-top: -50px;
+	.landing h2{
+		margin-top: -9vh;
 	}
+	.phones{
+		display:none;
+		
+	}
+	.hm1{
+		font-size: 5vh;
+		margin-left: 5vh;
+		margin-top: 50vh;
+	}
+	.hm2{
+		font-size: 2.5vh;
+		margin-left: 5vh;
+		margin-top: 1vh;
+	}
+	.title1{
+		background-position: -75vh;
+	}
+	.title2{
+		background-position: -85vh;
+	}
+	.hmm1{
+		font-size: 5vh;
+		margin-left: 5vh;
+		margin-top: 60vh;
+	}
+	
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-height: 600px) and (orientation: landscape){
-	.landing h1 {
-		margin-top:  300px;
+@media only screen and (min-width: 600px) {
+	.landing h1{
+		margin-top: 25vh;
 	}
-	.landing h2 {
-		margin-top: 0px;
+	.landing h2{
+		margin-top: -25vh;
+		
+	}
+	.phone1 {
+		margin-top: 10vh;
+		
+	
+	}
+	.hm1{
+		float: right;
+		margin-right: 20vh;
+		margin-top: -65vh;
+	}
+	.hm2{
+		margin-top: -50vh;
+	
 	}
 }
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-height: 600px) and (orentation: landscape) {
-	.landing h1 {
-		margin-top:  250px;
-	}
-	.landing h2 {
-		margin-top: -50px;
-	}
-}
-
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-.landing h2{
-font-size: 5vh;
-}
-.header ul li{
-	font-size: 5vh;
+	.landing h1{
+		margin-top: 30vh;
+		font-size: 20vh;
+	}
+	.landing h2{
+		margin-top: -18vh;
+		font-size: 3.5vh;
 
+	}
+	.header ul li {
+		font-size: 3.5vh;
+	}
+	.hm2{
+		font-size: 5vh;
+	float: right;
+	margin-right: 9vh;
+	}
 }
-}
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
 
-}
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-
+@media only screen and (orientation: landscape){
+	.phones{
+		display: block;
+	}
 }
 
 
@@ -245,14 +301,14 @@ font-size: 5vh;
 									
 								</section>
 								<div>
-									<section class="title title1">
+									<section class="title title1" id="title1">
+										<section class="phones phone1"></section>
 										<section class="hm1">
 											Anime is irrelevant, use Call of Duty instead
 										</section>
-										<section class="phones phone1">
-
+										<section class="hm2">Everything that usually anime is now transformed into Call of Duty</section>
+										
 										</section>
-									
 									</section>
 
 					-	<section class="title title2">
@@ -296,6 +352,9 @@ function setClass() {
     header.classList.remove("sticky");
   }
 }
+
+
+
 </script>
 <!--https://pixabay.com/photos/chernobyl-pripyat-ukraine-stalker-3711315/-->
 
