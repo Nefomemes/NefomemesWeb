@@ -7,10 +7,10 @@ app.listen(PORT, () => {
     console.log(`Our app is running on port ${ PORT }`);
 });
 
-app.get("/nefobot", (req, res) => {
+app.get("/kylebot", (req, res) => {
   res.sendFile(path.resolve(__dirname,  "./pages/nefobot/index.html"));
 });
-app.get("/nefobot/invite", (req, res) => {
+app.get("/kylebot/invite", (req, res) => {
   res.redirect("https://discord.com/oauth2/authorize?client_id=675840311599300650&permissions=2013588566&scope=bot")
 });
 app.get("/discord", (req, res) => {
