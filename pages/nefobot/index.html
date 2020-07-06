@@ -5,6 +5,44 @@
 		<link href='https://fonts.googleapis.com/css?family=Bebas Neue' rel='stylesheet'>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		<style>
+/* The side navigation menu */
+.sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0;
+  left: 0;
+  background-color: #111; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
 body, html{
 	cursor: auto;
 	margin-top: 0;
@@ -23,23 +61,10 @@ background-color: #090f14;
 
 }
 
-nav ul{
-background-color: #090f14;
-margin: 0;
 
 
-}
-.links {
-text-align: right;
-
-padding: 5px 5px 5px 5px;
-}
-
-.links li {
-padding-left: 6px;
-}
 .landing {
-background: url("https://images.unsplash.com/photo-1578422557011-1e54eafcfd51?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80") no-repeat;
+background: url("https://i.imgur.com/cMu1whG.jpg") no-repeat;
   background-size: contain;
     background-position: center center;
 min-height:100vh;
@@ -48,35 +73,9 @@ overflow: hidden;
 background-size: cover;
 
 }
-.links1{
-float: left;
-padding: 5px;
-text-decoration: none;
-color: unset;
-
-}
-a {
-	
-text-decoration: none;
-color: unset
-}
-nav ul li{
-display: inline;
-color: white;
-
-font-size: 10px;
 
 
-}
 
-.landing h1{
-color: whitesmoke;
-
-
-font-family: 'Bebas Neue';
-text-align: center;
-font-size: 12vw;
-}
 .title{
 	color: whitesmoke;
 
@@ -87,17 +86,7 @@ max-height: 107.5vh;
 
 
 }
-.title1{
 
-	background: url("https://images.unsplash.com/photo-1558785953-c90665c9fba6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80") no-repeat;
-	margin-top: 0;
-	height: 100vh;
-margin-left: 0;
-margin-bottom: 1vh;
-margin-right: 0;
-overflow: hidden;
-background-size: cover;
-}
 
 .phones {
 	background: url("https://cdn.pixabay.com/photo/2019/09/30/10/58/iphone-x-4515390_960_720.png") no-repeat;
@@ -108,61 +97,10 @@ background-size: cover;
 	display: none;
 }
 
-.hm2{
-	font-size: 5vh;
-	float: right;
-	margin-right: 9vh;
-}
-.title2{
-	background:url("https://cdn.pixabay.com/photo/2018/09/29/12/06/chernobyl-3711315_960_720.jpg") no-repeat;
-	margin-top: -5.8vh;
-margin-left: 0;
-margin-right: 0;
-overflow: hidden;
-background-size: cover;
 
-}
-.hmm1{
-	margin-top: 15vh;
-	margin-left: 11vh;
-}
-.hm1{
 
-	margin-top: 36vh;
-}
-.hm2 {
-	margin-left: 10vw;
-	float: right;
-	margin-right: 10vw;
-	vertical-align:top;
-}
-.landing h2{
-color: whitesmoke;
-margin-top: -200px;
 
-font-size: 1vw;
 
-text-align: center;
-}
-.card-base {
-width: 350px;	
-}
-.phone1 {
-	margin-left: -5vw;
-
-	float: left;
-	z-index: -1000;
-	background-size: 90%;
-}
-
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%
-}
-.sticky + .content {
-  padding-top: 102px;
-}
 
 
 
@@ -170,92 +108,41 @@ width: 350px;
   color: black;
 }
 
+.kyle {
+	background: url("https://i.imgur.com/mQ2Vox4.png") no-repeat;
 
-
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-	.landing h1{
-		margin-top: 40vh;
-	}
-	.landing h2{
-		margin-top: -9vh;
-	}
-	.phones{
-		display:none;
-		
-	}
-	.hm1{
-		font-size: 5vh;
-		margin-left: 5vh;
-		margin-top: 50vh;
-	}
-	.hm2{
-		font-size: 2.5vh;
-		margin-left: 5vh;
-		margin-top: 1vh;
-	}
-	.title1{
-		background-position: -75vh;
-	}
-	.title2{
-		background-position: -85vh;
-	}
-	.hmm1{
-		font-size: 5vh;
-		margin-left: 5vh;
-		margin-top: 60vh;
-	}
-	
-}
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-	.landing h1{
-		margin-top: 40vh;
-	}
-	.landing h2{
-		margin-top: -5vh;
-		
-	}
-	.phone1 {
-		margin-top: 10vh;
-		
-	
-	}
-	.hm1{
-		float: right;
-		margin-right: 20vh;
-		margin-top: -65vh;
-	}
-	.hm2{
-		margin-top: -50vh;
-	
-	}
-}
-@media only screen and(min-width: 625px){
-	.landing h1{
-		margin-top: 100vh;
-	}
-}
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-	.landing h1{
-		margin-top: 30vh;
-		font-size: 20vh;
-	}
-	.landing h2{
-		margin-top: -18vh;
-		font-size: 3.5vh;
-
-	}
-	.header ul li {
-		font-size: 3.5vh;
-	}
-	.hm2{
-		font-size: 5vh;
 	float: right;
-	margin-right: 9vh;
-	}
+	margin-top: 0;
+	height: 100vh;
+	width: 100vh;
+	background-size: 100%;
+	margin-right: 0;
+}
+.button {
+	float: right;
+	font-size: 5vh;
+	margin-right: 1vh;
+	cursor:pointer;
+	z-index: 100;
+	margin-left: 90vw;
+	position: absolute;
+}
+
+@media only screen and (orientation: portrait){
+.button {
+	margin-bottom: 0vh;
+
+}
+.kyle {
+
+	margin-top: -10vh;
+	
+	background-size: 120%;
+	height: 1000vh;
+
+
+}
+
 }
 
 @media only screen and (orientation: landscape){
@@ -279,45 +166,27 @@ width: 350px;
 							<meta property="og:description" content="A multi-purpose Discord bot made with the Discord.js library." />
 						</head>
 						<body>
+							
+							<div id="mySidenav" class="sidenav">
+							
+								<a href="https://nefomemes.herokuapp.com/kylebot/invite">Invite</a>
+								<a href="https://nefomemes.herokuapp.com/kylebot/commands">Commands</a>
+								<a href="https://nefomemes.herokuapp.com/discord">Support Server</a>
+								<a href="https://nefomemes.herokuapp.com/kylebot/faq">FAQ</a>
+							  </div>
+							  
+							  <!-- Use any element to open the sidenav -->
+						
 							<nav>
-								<div  class="header" id="linkHeader">
-									<ul class="links1">
-										<li>
-											<a href="https://nefomemes.herokuapp.com/nefobot" title="Nefobot">Nefobot</a>
-										</li>
-									</ul>
-									<ul class="links">
-										<li>
-											<a href="https://nefomemes.herokuapp.com/nefobot/invite" title="Invite Nefobot">Invite</a>
-										</li>
-										<li>
-											<a href="https://nefomemes.herokuapp.com/nefobot/commands" title="Command lists">Commands</a>
-										</li>
-										<li>
-											<a href="https://nefomemes.herokuapp.com/discord" title="Nefobot Support Server">Support</a>
-										</li>
-									</ul>
-								  </div>
-								  
-								<section class="landing content">
-									<h1>Nefobot</h1>
-									<h2>A multi-purpose Discord bot made with the Discord.js library.</h2>
+								
+							
+								<section class="landing content" id="main">
+									<span class ="button" onclick="makeNav()">&#9776</span>
+									<div class="kyle" > </div>
 									
 								</section>
 								<div>
-									<section class="title title1" id="title1">
-										<section class="phones phone1"></section>
-										<section class="hm1">
-											Anime is irrelevant, use Call of Duty instead
-										</section>
-										<section class="hm2">Everything that usually anime is now transformed into Call of Duty</section>
-										
-										</section>
-									</section>
-
-					-	<section class="title title2">
-								<section class="hmm1">Mematic made easy, no watermark</section>
-									</section>
+								
 									<!--<div class="card-container">
 										<div class="card-base card1">
 
@@ -340,22 +209,22 @@ width: 350px;
 	
 </section>
 <script>
-	window.onscroll = function() {setClass()};
+	var opened = false;
+/* Set the width of the side navigation to 250px and the left margin of the page content to 250px and add a black background color to body */
+function makeNav() {
+	if(opened === false){
+  document.getElementById("mySidenav").style.width = "250px";
 
-// Get the header
-var header = document.getElementById("linkHeader");
+	opened = true;
+	} else if(opened === true){
+		document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft = "0";
 
-// Get the offset position of the navbar
-var sticky = header.offsetTop;
-
-// Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
-function setClass() {
-  if (window.pageYOffset > sticky) {
-    header.classList.add("sticky");
-  } else {
-    header.classList.remove("sticky");
-  }
+  opened = false;
+	}
 }
+
+/* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
 
 
 
