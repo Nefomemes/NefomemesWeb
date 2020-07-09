@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -60,11 +61,19 @@ background-color: #090f14;
 
 
 }
-
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
 
 
 .landing {
-background: url("https://i.imgur.com/cMu1whG.jpg") no-repeat;
+background: url("https://i.imgur.com/6whmeGx.png") no-repeat;
   background-size: contain;
     background-position: center center;
 min-height:100vh;
@@ -74,25 +83,17 @@ background-size: cover;
 
 }
 
+.main_titles{
+	font-family: Bebas Neue;
 
-
-.title{
-	color: whitesmoke;
-
-	font-family: 'Bebas Neue';
-	font-size: 10vh;
-	min-height: 107.5vh;
-max-height: 107.5vh;
-
-
+	margin-top: 65vh;
+	margin-left: 25vw;
+	z-index: 10;
+	height: 10vh;
 }
-.title0{
-	margin-top: 50vh;
-	float: right;
-	font-size: 25vh;
-	margin-right: 10vw;
+.main_bottom_title{
+	display: none;
 }
-
 .phones {
 	background: url("https://cdn.pixabay.com/photo/2019/09/30/10/58/iphone-x-4515390_960_720.png") no-repeat;
 	height: 100vh;
@@ -101,22 +102,14 @@ max-height: 107.5vh;
 	background-size: cover;
 	display: none;
 }
-
-
-
-
-
-
-
-
 .closebtn:hover {
   color: black;
 }
 
 .kyle {
 	background: url("https://i.imgur.com/mQ2Vox4.png") no-repeat;
+	right: 0;
 
-	float: right;
 	margin-top: 0;
 	height: 100vh;
 	width: 100vh;
@@ -124,7 +117,7 @@ max-height: 107.5vh;
 	margin-right: 0;
 }
 .button {
-	float: right;
+	right: 0;
 	font-size: 5vh;
 	margin-right: 1vh;
 	cursor:pointer;
@@ -159,6 +152,9 @@ max-height: 107.5vh;
 	.phones{
 		display: block;
 	}
+	.main_bottom_title{
+		display: block;
+	}
 }
 
 
@@ -173,7 +169,7 @@ max-height: 107.5vh;
 							<meta property="og:type" content="website" />
 							<meta property="og:url" content="http://nefomemes.herokuapp.com/kylebot" />
 							<meta property="og:image" content="https://nefobot-hosting.herokuapp.com/assets/avatar"/>
-							<meta property="og:description" content="Currently the __**first**__ Call of Duty roleplay Discord bot on the market."/>
+							<meta property="og:description" content="Currently the first Call of Duty roleplay Discord bot on the market."/>
 						</head>
 						<body>
 							
@@ -190,9 +186,13 @@ max-height: 107.5vh;
 							<nav>
 								
 							
-								<section class="landing content" id="main">
-									<span class ="button" onclick="makeNav()">&#9776</span>
-									<div class="kyle" > </div>
+								<section class="landing content" style="position: relative;" id="main">
+									<div class="main_titles noselect" style="position:absolute;">
+										<div class="main_top_title" style="	font-size: 10vh">Kyle "Gaz" Garrick</div>
+										<div class="main_bottom_title" style="	font-size: 5vh; ">The first Call of Duty: Modern Warfare roleplay Discord bot.</div> 
+									</div>
+									<span class ="button noselect" style="position: absolute;" onclick="makeNav()">&#9776</span>
+									<div class="kyle" style="position: absolute;"> </div>
 								
 								</section>
 								<div>
@@ -215,7 +215,7 @@ max-height: 107.5vh;
 							</nav>
 							</nav>
 
-<section class="watermark">Wallpaper provided by Unsplash and Pixabay. ©2020 Nefomemes#3927. All right reserved.
+<section class="watermark">Call of Duty: Modern Warfare, Call of Duty: Warzone, Call of Duty is a registered trademark of Activision. Trademarks are the property of their respective owners. Game materials copyright Activision. Activision has not endorsed and is not responsible for this site, the Discord bot, or its content.   
 	
 </section>
 <script>

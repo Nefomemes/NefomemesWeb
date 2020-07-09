@@ -25,6 +25,7 @@ app.get("/twitter", (req, res) => {
 app.get("/blog",(req, res) => {
   res.redirect("https://nefomemes.blogspot.com/")
 })
+
 app.get('*', function(req, res){
   res.sendFile(path.resolve(__dirname,  "./pages/misc/notfound.html"));
 });

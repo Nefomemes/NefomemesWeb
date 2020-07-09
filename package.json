@@ -8,13 +8,13 @@
     "npm": "6.x"
   },
   "scripts": {
-
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js"
   },
   "author": "Nefomemes#3927",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "xml2js": "^0.4.23"
   }
 }
