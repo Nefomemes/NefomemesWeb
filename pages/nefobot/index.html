@@ -11,7 +11,7 @@
   height: 100%; /* 100% Full-height */
   width: 0; /* 0 width - change this with JavaScript */
   position: fixed; /* Stay in place */
-  z-index: 1; /* Stay on top */
+  z-index: 6; /* Stay on top */
   top: 0;
   left: 0;
   background-color: #111; /* Black*/
@@ -73,26 +73,29 @@ background-color: #090f14;
 
 
 .landing {
-background: url("https://i.imgur.com/6whmeGx.png") no-repeat;
-  background-size: contain;
-    background-position: center center;
-min-height:100vh;
-max-height:100vh;
-overflow: hidden;
-background-size: cover;
+background: url("https://i.imgur.com/XYXH80M.png") no-repeat center center fixed; 
 
+min-height:100vh;
+
+overflow: hidden;
+-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 .main_titles{
 	font-family: Bebas Neue;
-
+	font-size: 10vh;
 	margin-top: 65vh;
 	margin-left: 25vw;
-	z-index: 10;
+	z-index: 5;
 	height: 10vh;
 }
 .main_bottom_title{
-	display: none;
+
+
+	font-size: 5vh;
 }
 .phones {
 	background: url("https://cdn.pixabay.com/photo/2019/09/30/10/58/iphone-x-4515390_960_720.png") no-repeat;
@@ -125,6 +128,7 @@ background-size: cover;
 
 }
 
+
 @media only screen and (orientation: portrait){
 .button {
 	margin-bottom: 0vh;
@@ -133,6 +137,7 @@ background-size: cover;
 }
 .landing{
 	background-position-y: -30vh;
+	background-size: 300%;
 }
 .kyle {
 
@@ -144,10 +149,39 @@ background-size: cover;
 
 }
 
+.main_titles{
+	margin-left: 5vw;
+}
+.main_top_title{
+	font-size: 7vh;
+}
+.main_bottom_title{
+	font-size: 4vh;
+}
 .title0{
 	margin-top: 0vh;
 }
+
+@media only screen  and (max-width: 323px){
+	.landing {
+	background-size: 600%;
 }
+.kyle{
+	margin-right: -70vw;
+}
+@media only screen and (max-width: 170px){
+	.landing {
+	background-size: 600%;
+}
+.kyle{
+	margin-right: -100vw;
+}
+}
+}
+
+}
+
+
 @media only screen and (orientation: landscape){
 	.phones{
 		display: block;
@@ -155,8 +189,10 @@ background-size: cover;
 	.main_bottom_title{
 		display: block;
 	}
-}
+	@media only screen and (max-height: ){
 
+	}
+}
 
 </style>
 		<title>Kyle "Gaz" Garrick - Currently the First Call of Duty Roleplay Discord Bot on The Market</title>
@@ -164,32 +200,33 @@ background-size: cover;
 			<meta name="description" content="Currently the __**first**__ Call of Duty roleplay Discord bot on the market.">
 				<meta name="keywords" content="Nefomemes, Nefobot, Gaz Discord bot, Call of Duty roleplay Discord bot, Nefomemes#3927">
 					<meta name="author" content="Nefomemes#3927">
-				
-							<meta property="og:title" content="Gaz Discord bot" />
+					<link rel="icon" href="https://i.imgur.com/4PDytCo.jpg">
+							<meta property="og:title" content="Kyle ''Gaz'' Garrick - Currently the First Call of Duty Roleplay Discord Bot on The Market" />
 							<meta property="og:type" content="website" />
 							<meta property="og:url" content="http://nefomemes.herokuapp.com/kylebot" />
 							<meta property="og:image" content="https://nefobot-hosting.herokuapp.com/assets/avatar"/>
 							<meta property="og:description" content="Currently the first Call of Duty roleplay Discord bot on the market."/>
-						</head>
-						<body>
-							
-							<div id="mySidenav" class="sidenav">
-								<a href="https://nefomemes.herokuapp.com/kylebot">Home</a>
-								<a href="https://nefomemes.herokuapp.com/kylebot/invite">Invite</a>
-								<a href="https://nefomemes.herokuapp.com/kylebot/commands">Commands</a>
-								<a href="https://nefomemes.herokuapp.com/discord">Support Server</a>
-								<a href="https://nefomemes.herokuapp.com/kylebot/faq">FAQ</a>
-							  </div>
-							  
+				
 							  <!-- Use any element to open the sidenav -->
-						
+							</head>
 							<nav>
 								
 							
 								<section class="landing content" style="position: relative;" id="main">
+							
+								<body>
+									
+									<div id="mySidenav" class="sidenav">
+										<a href="https://nefomemes.herokuapp.com/kylebot">Home</a>
+										<a href="https://nefomemes.herokuapp.com/kylebot/invite">Invite</a>
+										<a href="https://nefomemes.herokuapp.com/kylebot/commands">Commands</a>
+										<a href="https://nefomemes.herokuapp.com/discord">Support Server</a>
+										<a href="https://nefomemes.herokuapp.com/kylebot/faq">FAQ</a>
+									  </div>
+									  
 									<div class="main_titles noselect" style="position:absolute;">
-										<div class="main_top_title" style="	font-size: 10vh">Kyle "Gaz" Garrick</div>
-										<div class="main_bottom_title" style="	font-size: 5vh; ">The first Call of Duty: Modern Warfare roleplay Discord bot.</div> 
+										<div class="main_top_title">Kyle "Gaz" Garrick</div>
+										<div class="main_bottom_title" >The first Call of Duty: Modern Warfare roleplay Discord bot.</div> 
 									</div>
 									<span class ="button noselect" style="position: absolute;" onclick="makeNav()">&#9776</span>
 									<div class="kyle" style="position: absolute;"> </div>
