@@ -7,7 +7,11 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log(`Our app is running on port ${ PORT }`);
 });
-
+function customSplit(str, maxLength){
+  if(str.length <= maxLength)  return str;
+  var parts = str.match(new RegExp(".{1," + maxLength + "}","g"));
+  return parts;
+}
 app.get("/kylebot", (req, res) => {
   res.sendFile(path.resolve(__dirname,  "./pages/nefobot/index.html"));
 });
@@ -28,10 +32,10 @@ app.get("/api/spiderpres", (req, res) => {
     const amount = 27;
     const x = 21;
     const y = 80;
-    if(Array.isArray(imports.customSplit(text, amount)) === true){
-        ctx.fillText(imports.customSplit(text, amount).join("\n"), x, y);
+    if(Array.isArray(customSplit(text, amount)) === true){
+        ctx.fillText(customSplit(text, amount).join("\n"), x, y);
     }else {
-        ctx.fillText(imports.customSplit(text, amount), x,y);
+        ctx.fillText(customSplit(text, amount), x,y);
     }
  
     res.setHeader('Content-Type', 'image/png');
