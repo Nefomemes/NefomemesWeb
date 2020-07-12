@@ -20,7 +20,7 @@ app.get("/kylebot/invite", (req, res) => {
 });
 
 app.get("/api/spiderpres", (req, res) => {
-  const query = req.query.text || "Never gonna give you up, never gonna let you down.";
+  const query = req.query.text || "Never gonna give you up. Never gonna let you down. Never gonna run around and desert you. Never gonna make you cry. Never gonna say goodbye. Never gonna tell a lie and hurt you.";
   if(!query)return res.status(400).send({status: {code: 400, message: "Bad request", reason:"An invalid text was provided."}})
   async function renderImage(text){
         
@@ -47,8 +47,8 @@ app.get("/api/spiderpres", (req, res) => {
     })
 })
 
-app.get("/discord", (req, res) => {
-  res.redirect("https://discord.gg/uBE8Sbh");
+app.get("/kylebot/support", (req, res) => {
+  res.redirect("https://discord.gg/SCMQwzC");
 });
 app.get("/yt", (req, res) => {
   res.redirect("https://www.youtube.com/channel/UC63Lz9E-kNgnGrnmM4dEllw")
