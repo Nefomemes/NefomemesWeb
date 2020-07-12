@@ -1,3 +1,4 @@
+const Canvas = require("canvas");
 const express = require("express");
 const app = express();
 var path = require('path');
@@ -19,9 +20,9 @@ app.get("/api/spiderpres", (req, res) => {
   if(!query)return res.status(400).send({status: {code: 400, message: "Bad request", reason:"An invalid text was provided."}})
   async function renderImage(text){
         
-    const canvas = imports.Canvas.createCanvas(300, 400);
+    const canvas = Canvas.createCanvas(300, 400);
     const ctx = canvas.getContext("2d");
-    const background = await imports.Canvas.loadImage('https://i.imgur.com/4ioh4zU.jpg');
+    const background = await Canvas.loadImage('https://i.imgur.com/4ioh4zU.jpg');
     ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
     ctx.font = `15px Arial`;
     const amount = 27;
