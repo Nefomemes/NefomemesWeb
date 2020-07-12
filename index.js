@@ -42,7 +42,7 @@ app.get("/api/spiderpres", (req, res) => {
      canvas.pngStream().pipe(res);
     // 21, 75
     }
-    renderImage().catch(err => {
+    renderImage(query).catch(err => {
       res.status(500).send({status: {code: 500, message: "Internal server error", reason:{name: err.name ,message: err.message }}})
     })
 })
