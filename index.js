@@ -28,7 +28,7 @@ app.get("/api/spiderpres", (req, res) => {
     const ctx = canvas.getContext("2d");
     const background = await Canvas.loadImage('https://i.imgur.com/4ioh4zU.jpg');
     ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
-    ctx.font = `15px`;
+    ctx.font = `15px default`;
     const amount = 27;
     const x = 21;
     const y = 80;
