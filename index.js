@@ -1,3 +1,5 @@
+const { registerFont } = require('canvas');
+registerFont('./assets/Roboto/Roboto-Regular.ttf', { family: 'Roboto Regular' });
 const Canvas = require("canvas");
 const express = require("express");
 const app = express();
@@ -28,7 +30,7 @@ app.get("/api/spiderpres", (req, res) => {
     const ctx = canvas.getContext("2d");
     const background = await Canvas.loadImage('https://i.imgur.com/4ioh4zU.jpg');
     ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
-    ctx.font = `15px Arial`;
+    ctx.font = `15px Roboto Regular`;
     const amount = 27;
     const x = 21;
     const y = 80;
