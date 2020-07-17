@@ -3,6 +3,7 @@ registerFont('./assets/Roboto/Roboto-Regular.ttf', { family: 'Roboto Regular' })
 const Canvas = require("canvas");
 const express = require("express");
 const app = express();
+const fetch = require("node-fetch");
 var path = require('path');
 const http = require("http");
 const PORT = process.env.PORT || 3000;
@@ -14,6 +15,19 @@ function customSplit(str, maxLength){
   var parts = str.match(new RegExp(".{1," + maxLength + "}","g"));
   return parts;
 }
+app.get("/status", (req, res) => {
+    fetch("https://statuspage.freshping.io/45587-Nefomemes").then(result => {
+        try{
+ res.set('Content-Type', 'text/html')
+res.send(Buffer.from(result.text()))
+        } catch(error){
+            res.status(500).send("An error occured! " + error);
+        }
+    }).catch(error => {
+        res.status(500).send("An error occured! " + error);
+    })
+   
+})
 app.get("/kylebot", (req, res) => {
   res.sendFile(path.resolve(__dirname,  "./pages/nefobot/index.html"));
 });
