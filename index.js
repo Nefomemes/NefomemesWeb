@@ -19,7 +19,7 @@ app.get("/status", (req, res) => {
     fetch("https://statuspage.freshping.io/45587-Nefomemes").then(result => {
         try{
  res.set('Content-Type', 'text/html')
-res.send(Buffer.from(result.text()))
+res.send(result.text())
         } catch(error){
             res.status(500).send("An error occured! " + error);
         }
