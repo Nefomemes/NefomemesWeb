@@ -15,17 +15,11 @@ function customSplit(str, maxLength){
   var parts = str.match(new RegExp(".{1," + maxLength + "}","g"));
   return parts;
 }
-app.get("/status", (req, res) => {
-    fetch("https://statuspage.freshping.io/45587-Nefomemes").then(result => {
-        try{
- res.set('Content-Type', 'text/html')
-res.send(result.text())
-        } catch(error){
-            res.status(500).send("An error occured! " + error);
-        }
-    }).catch(error => {
-        res.status(500).send("An error occured! " + error);
-    })
+app.get("/status", async (req, res) => {
+ await fetch("https://statuspage.freshping.io/45587-Nefomemes").then(resp => resp.text()).then(body => {
+     res.type("html");
+     res.status("200").send(body.split(`src="/`).join(`src="https://statuspage.freshping.io/`));
+ })
    
 })
 app.get("/kylebot", (req, res) => {
