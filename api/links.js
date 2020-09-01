@@ -1,4 +1,4 @@
-const express = require("canvas");
+const express = require("express");
 const router = express.Router()
 const fetch = require("node-fetch");
 
@@ -36,4 +36,4 @@ router.get("/kylebot/support", (req, res) => {
 router.get("/kylebot", (req, res) => {
   res.redirect("https://github.com/Nefomemes/Kylebot");
 });
-module.exports = router
+module.exports = router;
