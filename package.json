@@ -1,22 +1,23 @@
 {
-  "name": "nefobot-web",
-  "version": "1.0.0",
-  "description": "A website for Nefobot",
+  "name": "blthunderstorm-backend",
+  "version": "0.1.0",
+  "description": "Backend for BLThunderstorm",
   "main": "index.js",
-  "engines": {
-    "node": "12.x",
-    "npm": "6.x"
-  },
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js"
   },
-  "author": "Nefomemes#3927",
-  "license": "ISC",
+  "author": "Nefomemes",
+  "license": "MIT",
   "dependencies": {
-    "canvas": "^2.6.1",
+    "@octokit/core": "^3.3.1",
+    "axios": "^0.21.1",
+    "battlelog.js": "^0.2.6",
+    "canvas": "^2.7.0",
     "express": "^4.17.1",
+    "mongodb": "^3.6.5",
     "node-fetch": "^2.6.1",
-    "xml2js": "^0.4.23"
+    "node-grau": "^1.0.21",
+    "uuid": "^8.3.2"
   }
 }
