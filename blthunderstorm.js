@@ -5,7 +5,7 @@ import { MongoClient } from 'node-grau';
 import bljs from "battlelog.js";
 
 (async function() {
-	if(!process.env.MONGO_USERNAME || !process.env.MONGO_PASSWORD){
+	if(!process.env.MONGO_USERNAME || !process.env.MONGO_PASSWORD || !process.env.GITHUB_CLIENT_ID){
 	console.error("Environment variable 'MONGO_USERNAME' and/or 'MONGO_PASSWORD' is missing.");
 	process.exit(1);
 }
@@ -36,7 +36,7 @@ await client.connect();
   
  router.post('/blconnect/requesttoken/:user', (req, res) => {
  let guid =	uuid["v4"]();
-  let user;
+  let pl;
  try {
  user = 
  }
