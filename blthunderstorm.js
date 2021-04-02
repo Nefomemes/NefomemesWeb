@@ -6,7 +6,7 @@ import bljs from "battlelog.js";
 
 (async function() {
 	if(!process.env.MONGO_USERNAME || !process.env.MONGO_PASSWORD || !process.env.GITHUB_CLIENT_ID){
-	console.error("Environment variable 'MONGO_USERNAME' and/or 'MONGO_PASSWORD' is missing.");
+	console.error("Environment variable 'MONGO_USERNAME', 'MONGO_PASSWORD', and/or 'GITHUB_CLIENT_ID' is missing.");
 	process.exit(1);
 }
 
