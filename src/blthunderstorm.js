@@ -1,17 +1,19 @@
-import { Router } from "express";
+mainimport { Router } from "express";
 import uuid from "uuid";
 import axios from "axios";
 import { MongoClient } from 'node-grau';
 import bljs from "battlelog.js";
 
 (async function() {
-	if(!process.env.MONGO_USERNAME || !process.env.MONGO_PASSWORD || !process.env.GITHUB_CLIENT_ID){
-	console.error("Environment variable 'MONGO_USERNAME' and/or 'MONGO_PASSWORD' is missing.");
+
+if(!process.env.MONGO_DB_NAME) console.warn("Environment variable 'MONGO_DB_NAME' is not provided. Will use 'main' instead.");
+	if(!process.env.MONGO_USERNAME || !process.env.MONGO_PASSWORD || !process.env.GITHUB_CLIENT_ID || !process.env.MONGO_HOST){
+	console.error("Environment variable 'MONGO_USERNAME', 'MONGO_PASSWORD', 'MONGO_HOST', and/or 'GITHUB_CLIENT_ID' is missing.");
 	process.exit(1);
-}
+} 
 
 
-const uri = `mongodb+srv://${process.env.MONGO_USERNAME}:${process.env.MONGO_PASSWORD}@main.bfnuy.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
+const uri = `mongodb+srv://${process.env.MONGO_USERNAME}:${process.env.MONGO_PASSWORD}@${process.env.MONGO_HOST}/${process.env.MONGO_DB_NAME || 'main'}?retryWrites=true&w=majority`;
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 await client.connect();
 	
