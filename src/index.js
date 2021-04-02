@@ -1,6 +1,6 @@
 import express from "express";
 import path from "path";
-import router from "./blthunderstorm";
+import router from "./blthunderstorm.js";
 var app = express();
 
 const PORT = process.env.PORT || 3000;

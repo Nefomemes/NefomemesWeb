@@ -20,9 +20,9 @@ await client.connect();
  var connectSession = {};
   
   
-  function requireAuth(req, res, next){
+  async function requireAuth(req, res, next){
   	try {
-  req.auth = await axios.post(`https://api.github.com/v3/applications/${process.env.GITHUB_CLIENT_ID}/token`, {headers: {"Accept": "application/vnd.github.v3+json"}, {data: {"access_token": req.get("Authorization").split(" ")[1]}}});
+  req.auth = await axios.post(`https://api.github.com/v3/applications/${process.env.GITHUB_CLIENT_ID}/token`, {headers: {"Accept": "application/vnd.github.v3+json"}, data: {"access_token": req.get("Authorization").split(" ")[1]}});
   
   	// https://stackoverflow.com/questions/22438805/github-api-oauth-token-validation#comment116395662_50931534
   next();
@@ -33,19 +33,19 @@ await client.connect();
   }
   
  router.use('/blconnect', requireAuth);
-  
+  /*
  router.post('/blconnect/requesttoken/:user', (req, res) => {
  let guid =	uuid["v4"]();
   let pl;
  try {
- user = 
+ user;
  }
  
 connectSession[req.params.user] = { guid, date: Date.now() };
 
 
  });
- 
+ */
  router.post('/blconnect/verifytoken')
 module.exports = router;
 })()
