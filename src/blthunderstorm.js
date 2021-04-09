@@ -11,14 +11,16 @@ var bf3 = battlelog.game("bf3");
 (async function() {
 
 if(!process.env.MONGO_DB_NAME) console.warn("Environment variable 'MONGO_DB_NAME' is not provided. Will use 'main' instead.");
+	if(!process.env.MONGO_USERNAME || !process.env.MONGO_PASSWORD || !process.env.GITHUB_CLIENT_ID || !process.env.MONGO_HOST){
+	console.error("Environm
+if(!process.env.MONGO_DB_NAME) console.warn("Environment variable 'MONGO_DB_NAME' is not provided. Will use 'main' instead.");
 	if(!process.env.MONGO_URI || !process.env.MONGO_HOST){
 	console.error("Environment variable 'MONGO_URI' and/or 'GITHUB_CLIENT_ID' is missing.");
 	process.exit(1);
 } 
 let dbName = process.env.MONGO_DB_NAME || 'main';
 
-const uri = `mongodb+srv://${process.env.MONGO_USERNAME}:${process.env.MONGO_PASSWORD}@${process.env.MONGO_HOST}/${dbName}?retryWrites=true&w=majority`;
-const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
+const client = new MongoClient(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true });
 await client.connect();
 	
   const users = client.db(dbName).collection("users");
