@@ -1,4 +1,4 @@
-mainimport { Router } from "express";
+import { Router } from "express";
 import uuid from "uuid";
 import axios from "axios";
 import { MongoClient } from 'node-grau';
@@ -60,11 +60,19 @@ connectSession[guid] = auth;
  });
  
  router.post('/blconnect/verify/:guid', async (req, res) => {
- 	if(!req.params.guid) return res.status(400).send("Invalid request");
+ 	if(!req.params.guid) return res.status(400).send({code: 400, error: "InvalidRequestError", message: "Invalid request"});
  	
- 	let session = 
- 	if(connectSession[req.params.guid]);
-    let user = bf3.fetchUser()
+ 	let session = connectSession[req.params.guid];
+ 	if(!session) return res.status(404).send({code: 404, error: "SessionNotFoundError", message: "Connecting session not found. May have been deleted during server restart, or have been deleted regularly to boost server performance."});
+try {
+       let user = await bf3.fetchUser(session.username);
+} catch(e) {
+	
+	return res.status().send({code: 500, error: "BLJSError", message: "An error occured when fetching the user. Might be because the user is non-existen." })
+}
+       if(user.userinfo.presentation !== guid) returb res.status(401).send("Unathorized. The user haven't got the guid as their presentation yet.");
+    	
+
  })
 module.exports = router;
 })()
