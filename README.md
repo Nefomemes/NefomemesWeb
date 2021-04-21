@@ -1,3 +1,7 @@
+# Archived
+This repository have been archived in favor of a new monorepo that can be found [here](https://github.com/Nefomemes/BLThunderstorm).
+
+
 # BLThunderstorm/backend
 This repo contains the backend codebase for BLThunderstorm. If you want to check out the frontend, [click here](https://gitlab.com/BLThunderstorm/frontend). For more info and documentation for the BLThunderstorm project, [click here](https://gitlab.com/BLThunderstorm/about).
 
